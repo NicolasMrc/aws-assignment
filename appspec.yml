@@ -5,5 +5,5 @@ files:
     destination: /home/ubuntu/simple-express
 hooks:
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: /start.sh
       timeout: 300
