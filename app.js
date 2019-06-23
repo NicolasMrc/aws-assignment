@@ -14,9 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-const ENDPOINT = '/api/v1/'
-
-app.use(ENDPOINT, documentationRouter)
-app.route(ENDPOINT + 'numbers/:number').get(doubleNumber)
+app.use('/', documentationRouter)
+app.route('/numbers/:number').get(doubleNumber)
 
 module.exports = app

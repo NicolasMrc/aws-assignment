@@ -1,4 +1,3 @@
-
 // get the number in params and return its double
 function doubleNumber (req, res) {
   const number = req.params.number
@@ -8,7 +7,8 @@ function doubleNumber (req, res) {
     } })
   } else {
     const doubledNumber = number * 2
-    res.status(200).send({ result: doubledNumber })
+    res.header('Content-Type', 'application/json')
+    res.status(200).type('json').send({ result: doubledNumber })
   }
 }
 

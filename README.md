@@ -29,10 +29,17 @@ npm run lint
 
 ## Unit Tests
 
-This Project use Mocha and Chai for unit testing, to run the tests simply run the following command :
+This Project uses Mocha and Chai for unit testing, to run the tests simply run the following command :
 
 ```
-npm run test
+npm run test:unit
 ```
 
+## Integration Tests
+
+This project uses Mocha and Supertest to run integration tests against the application : 
+
+```
+npm run test:integration
+```
 
