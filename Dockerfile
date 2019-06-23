@@ -5,9 +5,10 @@ RUN chmod 777 -R /usr/share/nginx/html
 COPY ./custom-nginx-file.conf /etc/nginx/conf.d/default.conf
 WORKDIR /var/www/aws-assignment
 COPY package*.json ./
-RUN apt-get update -y
-RUN apt-get install nodejs -y
-RUN apt-get install npm -y
+RUN apt-get update
+RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
 RUN npm install
 COPY . .
 EXPOSE 8080
