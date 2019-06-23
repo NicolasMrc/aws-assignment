@@ -2,7 +2,7 @@
   "family": "shippable",
   "containerDefinitions": [
     {
-      "name": "node-app",
+      "name": "aws-assignment",
       "image": "aws-assignment-image",
       "portMappings": [
         {
