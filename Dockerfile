@@ -7,7 +7,7 @@ WORKDIR /var/www/aws-assignment
 COPY package*.json ./
 RUN apt-get update
 RUN apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x
 RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 RUN npm install
