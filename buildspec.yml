@@ -27,6 +27,8 @@ artifacts:
     - app.js
     - start.sh
     - index.html
+    - Dockerfile
+    - Dockerrun.aws.json
     - package.json
     - node_modules/async/*
     - node_modules/lodash/*
