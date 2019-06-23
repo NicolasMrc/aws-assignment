@@ -1,15 +1,10 @@
-FROM nginx:latest
+FROM smebberson/alpine-nginx-nodejs:latest
 RUN rm -rf /usr/share/nginx/html/*
 ADD ./ /usr/share/nginx/html
 RUN chmod 777 -R /usr/share/nginx/html
 COPY ./custom-nginx-file.conf /etc/nginx/conf.d/default.conf
 WORKDIR /var/www/aws-assignment
 COPY package*.json ./
-RUN apt-get update
-RUN apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_10.x
-RUN apt-get install -y nodejs
-RUN apt-get install -y npm
 RUN npm install
 COPY . .
 EXPOSE 8080
