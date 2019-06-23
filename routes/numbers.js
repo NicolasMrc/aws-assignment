@@ -7,8 +7,7 @@ function doubleNumber (req, res) {
     } })
   } else {
     const doubledNumber = number * 2
-    res.header('Content-Type', 'application/json')
-    res.status(200).type('json').send({ result: doubledNumber })
+    res.status(200).send({ result: doubledNumber })
   }
 }
 
