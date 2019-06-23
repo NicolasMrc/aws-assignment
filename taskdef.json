@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "node-app",
-      "image": "${APP_IMAGE_SOURCENAME}/${APP_IMAGE_VERSIONNAME}",
+      "image": "aws-assignment-image",
       "portMappings": [
         {
           "containerPort": 80,
