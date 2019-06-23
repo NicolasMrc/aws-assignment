@@ -5,6 +5,9 @@ RUN chmod 777 -R /usr/share/nginx/html
 COPY ./custom-nginx-file.conf /etc/nginx/conf.d/default.conf
 WORKDIR /var/www/aws-assignment
 COPY package*.json ./
+RUN apt-get update
+RUN apt-get install nodejs
+RUN apt-get install npm
 RUN npm install
 COPY . .
 EXPOSE 8080
