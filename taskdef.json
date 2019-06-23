@@ -2,7 +2,7 @@
   "containerDefinitions": [
     {
       "name": "simple-api",
-      "image": "<IMAGE1_NAME>",
+      "image": "aws-assignment-image",
       "portMappings": [
         {
           "containerPort": 80,
