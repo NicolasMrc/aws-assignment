@@ -24,11 +24,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - app.js
-    - taskdef.json
-    - appspec.yml
-    - start.sh
-    - index.html
-    - package.json
-    - node_modules/async/*
-    - node_modules/lodash/*
+    - '**/*'
