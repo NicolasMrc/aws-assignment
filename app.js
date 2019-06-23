@@ -17,4 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', documentationRouter)
 app.route('/numbers/:number').get(doubleNumber)
 
+app.route('/status').get(function (req, res) {
+  res.send({ message: 'ok' })
+})
+
 module.exports = app
