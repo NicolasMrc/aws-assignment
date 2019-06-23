@@ -3,7 +3,8 @@ const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
-const numbersRouter = require('./routes/numbers')
+const documentationRouter = require('./routes/documentation')
+const { doubleNumber } = require('./routes/numbers')
 
 const app = express()
 
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-const ENDPOINT = '/api/v1/'
-app.use(ENDPOINT + 'numbers', numbersRouter)
+app.use('/', documentationRouter)
+app.route('/numbers/:number').get(doubleNumber)
 
 module.exports = app

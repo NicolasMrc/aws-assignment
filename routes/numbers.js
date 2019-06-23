@@ -1,8 +1,5 @@
-var express = require('express')
-var router = express.Router()
-
 // get the number in params and return its double
-router.get('/:number', function (req, res, next) {
+function doubleNumber (req, res) {
   const number = req.params.number
   if (isNaN(number)) {
     res.status(500).send({ error: {
@@ -10,8 +7,9 @@ router.get('/:number', function (req, res, next) {
     } })
   } else {
     const doubledNumber = number * 2
-    res.status(200).send({ result: doubledNumber })
+    res.header('Content-Type', 'application/json')
+    res.status(200).type('json').send({ result: doubledNumber })
   }
-})
+}
 
-module.exports = router
+module.exports = { doubleNumber }
