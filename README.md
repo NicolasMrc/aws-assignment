@@ -1,8 +1,11 @@
 # Simple double number API
 
+This API simply double a given number.
+
 ## Documentation
 
-You can find the documentation generated with Swagger here here : 
+- This API was developed using NodeJS & ExpressJS 
+- You can find the documentation generated with Swagger here here : 
 [Online Documentation](https://aws.nicolasmercier.io/documentation)
 
 ## Installation & Run
@@ -16,10 +19,20 @@ npm run start
 
 The API will be deployed on `http://localhost:3000/api/v1/`
 
-## Run Static Code Analysis
+## Static Code Analysis
 
 This Project use StandardJS, to run static code analysis simply run the following command :
 
 ```
 npm run lint
 ```
+
+## Unit Tests
+
+This Project use Mocha and Chai for unit testing, to run the tests simply run the following command :
+
+```
+npm run test
+```
+
+

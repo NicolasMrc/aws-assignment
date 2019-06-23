@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
 const documentationRouter = require('./routes/documentation')
-const numbersRouter = require('./routes/numbers')
+const { doubleNumber } = require('./routes/numbers')
 
 const app = express()
 
@@ -17,6 +17,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 const ENDPOINT = '/api/v1/'
 
 app.use(ENDPOINT, documentationRouter)
-app.use(ENDPOINT + 'numbers', numbersRouter)
+app.route(ENDPOINT + 'numbers/:number').get(doubleNumber)
 
 module.exports = app
