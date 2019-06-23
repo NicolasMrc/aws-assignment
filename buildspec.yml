@@ -29,6 +29,7 @@ artifacts:
     - index.html
     - Dockerfile
     - Dockerrun.aws.json
+    - custom-nginx-file.conf
     - package.json
     - node_modules/async/*
     - node_modules/lodash/*
