@@ -1,5 +1,4 @@
 {
-  "family": "shippable",
   "containerDefinitions": [
     {
       "name": "aws-assignment-image",
