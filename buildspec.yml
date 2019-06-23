@@ -25,8 +25,6 @@ phases:
 artifacts:
   files:
     - app.js
-    - taskdef.json
-    - appspec.yml
     - start.sh
     - index.html
     - package.json
