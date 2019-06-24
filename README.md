@@ -1,7 +1,7 @@
 # Simple double number API
 
 This API simply double a given number : 
-[Live Demo](https://aws.nicolasmercier.io/api/v1/numbers/4).
+[Live Demo](http://aws.nicolasmercier.io/api/v1/numbers/4).
 This API was build using NodeJQS and ExpressJS. 
 
 ## Documentation
