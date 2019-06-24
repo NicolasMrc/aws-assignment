@@ -2,7 +2,7 @@
 
 This API simply double a given number : 
 [Live Demo](http://aws.nicolasmercier.io/api/v1/numbers/4).
-This API was build using NodeJQS and ExpressJS. 
+This API was build using NodeJS and ExpressJS. 
 
 ## Documentation
 
